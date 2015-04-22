@@ -11,6 +11,8 @@ body{
     margin-top: 100%;
     left: 0;
     box-shadow: 0px -3px 7px 3px #818282;
+    padding-top: 3px;
+    padding-bottom: 4px;
 }
 
 #bottom-menu li{
@@ -19,6 +21,7 @@ body{
     padding: 3px;
     padding-left: 2px;
     padding-right: 2px;
+    
 }
 
 #bottom-menu li button{

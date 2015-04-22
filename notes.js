@@ -2,6 +2,7 @@ console.log("Notesjs Loaded!");
 
     
 var client = new Dropbox.Client({key: "canag10jxag3efd"});
+var ds;
 
 console.log("Notesjs Started!");
 
@@ -11,13 +12,17 @@ console.log("Notesjs Started!");
 client.authenticate();
 
 var dsMan = client.getDatastoreManager();
-dsMan.OpenDefualtDatastore(function(error, datastore) {
+dsMan.openDefaultDatastore(function(error, datastore) {
     if(error){
         alert("Error loading your note: " + error);
+        console.error("Error loading your note: " + error);
     }
-})
-   
-    //dsMan:client.getDatastoreManager(),
+    
+    ds = datastore;
+
+});
+
+var table = ds.getTable("notes");
 
 var connect = function() {
     client.authenticate({interactive: false}, 
@@ -28,9 +33,7 @@ var connect = function() {
         }
      );
 };
-    
-var table = dsMan.getTable("notes");
-    
+
     
 var add = function(tit, bod, blank) {
     if(blank == true || tit == ""){
@@ -41,12 +44,12 @@ var add = function(tit, bod, blank) {
     table.insert({
         title: tit,
         body: bod,
-        created: new Date()
+        created: Date()
     });
 };
     
 var refresh = function(){
-    window.refresh();
+    location.reload();
 };
     
 var end = function(){
