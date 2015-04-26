@@ -12,6 +12,9 @@
     <script type="text/javascript" src="https://www.dropbox.com/static/api/dropbox-datastores-1.2-latest.js"></script>
     
     <body>
+        <a href = "#">
+            <div id = "ham-menu"></div>
+        </a>
         <div id = "app-content">
             <h2 align = "center">Owl Notes</h2>
             
@@ -22,8 +25,8 @@
         
         <div id = "bottom-menu" align = "center">
             <ul align = "center">
-                <li><button onClick = "new();" class = "btn btn-primary">New</button></li>
-                <li><button onClick = "refresh();" class = "btn">Refresh</button></li>
+                <li><button onClick = "new('', '', true)" class = "btn btn-primary">New</button></li>
+                <li><button onClick = "refresh()" class = "btn">Refresh</button></li>
                 <li><button class = "btn btn-warning">Delete</button></li>
             </ul>
         </div>

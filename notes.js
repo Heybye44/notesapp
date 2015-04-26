@@ -3,6 +3,7 @@ console.log("Notesjs Loaded!");
     
 var client = new Dropbox.Client({key: "canag10jxag3efd"});
 var ds;
+var table;
 
 console.log("Notesjs Started!");
 
@@ -19,10 +20,12 @@ dsMan.openDefaultDatastore(function(error, datastore) {
     }
     
     ds = datastore;
+    console.info(ds);
+    console.info(datastore);
+    table = ds.getTable("notes");
 
 });
 
-var table = ds.getTable("notes");
 
 var connect = function() {
     client.authenticate({interactive: false}, 

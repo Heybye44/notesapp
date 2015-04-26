@@ -30,3 +30,12 @@ body{
     padding-right: 10%;
     padding-left: 10%;
 }
+
+#ham-menu{
+    background-color: #33CCFF;
+    height: 8px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 3px 7px 3px #818282;
+}
