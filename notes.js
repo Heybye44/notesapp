@@ -69,4 +69,3 @@ var end = function(){
 };
     
 connect();
-

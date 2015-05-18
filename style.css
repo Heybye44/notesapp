@@ -37,5 +37,24 @@ body{
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: 0px 3px 7px 3px #818282;
+    box-shadow: 0px -3px 7px 3px #818282;
+}
+
+#new-menu{
+    background-color: #33CCFF;
+    position: fixed;
+    box-shadow: 0px 0px 7px 3px #818282;
+    top: 20%;
+    margin: 15px;
+    padding: 6px;
+}
+
+
+
+#new-menu input{
+    width: 100%;
+}
+
+#new-menu textarea{
+    width: 100%;
 }

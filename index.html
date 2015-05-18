@@ -3,34 +3,46 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Owl Notes</title>
+        <title>Notes</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="style.css" type="text/css" />
     </head>
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/dropbox-datastores-1.2-latest.js"></script>
+    <!-- My Scripts-->
+    <script type="text/javascript" src="noteManager.js"></script>
     
     <body>
         <a href = "#">
             <div id = "ham-menu"></div>
         </a>
         <div id = "app-content">
-            <h2 align = "center">Owl Notes</h2>
+            <h2 align = "center">Notes</h2>
             
-            <ol>
+            <ol id = "note-area">
                 
             </ol>
         </div>
         
         <div id = "bottom-menu" align = "center">
             <ul align = "center">
-                <li><button onClick = "new('', '', true)" class = "btn btn-primary">New</button></li>
-                <li><button onClick = "refresh()" class = "btn">Refresh</button></li>
-                <li><button class = "btn btn-warning">Delete</button></li>
+                <li><button onClick = "refresh()" class = "btn btn-primary">Refresh</button></li>
+                <li><button class = "btn btn-danger">Delete</button></li>
             </ul>
+        </div>
+        
+        <div id = "new-menu">
+            <h3>New Note</h3>
+            
+            <label for="new-note-name">Name:</label>
+            <input type="text" name="new-note-name" id = "new-note-name"/>
+            <br/>
+            <label for="new-note-desc">Description:</label>
+            <br/>
+            <textarea type="text" name="new-note-desc" id = "new-note-desc" rows = "5"></textarea>
+            <br/>
+            <button class = "btn btn-success" onClick = "save()">Save</button>
         </div>
     </body>
     
-    <script type="text/javascript" src="notes.js"></script>
+    <!--<script type="text/javascript" src="notes.js"></script>-->
 </html>
