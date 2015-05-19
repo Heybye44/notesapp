@@ -3,8 +3,8 @@ var newNoteDesc;
 var newNoteTitle;
 var noteArea;
 
-var noteCount;
 var current;
+var currentHTML;
 
 window.onload = function(){
     newNoteMenu = document.getElementById("new-menu");
@@ -12,8 +12,13 @@ window.onload = function(){
     newNoteTitle = document.getElementById("new-note-name");
     noteArea = document.getElementById("note-area");
     
+    //clean up
+    if(localStorage.getItem("#") == null){
+        localStorage.removeItem("#");
+    }
+    
     refresh();
-};
+}
 
 function save() {
     var n = "#" + newNoteTitle.value;
@@ -31,18 +36,21 @@ function remove(){
 }
 
 function refresh(){
-    var i = 0;
+    noteArea.innerHTML = "";
+    console.info("Cleared Notes Area.");
     
     console.info("The LocalStorage Length is: " + localStorage.length);
     console.info("i is: " + i);
     console.log("i == localStorage.length is:" + i == localStorage.length);
     
-    for(i = 0; i == localStorage.length; i++){
+    for(var i = 0; i < localStorage.length; i++){
         console.info("i is: " + i);
         
         current = localStorage.key(i);
         if(current.substr(0, 1) == "#"){
-            noteArea.innerHTML =+ createHtml(current.substr(1), localStorage.getItem(current)); //Adds the html to the page
+            currentHTML = createHtml(current.substr(1), localStorage.getItem(current)); //Makes the HTML
+            
+            noteArea.appendChild(currentHTML); //Adds the html to the page
             console.log(current.substr(1) + " - Note displayed."); //Logs the note title
         }else{
             console.log("No notes saved.");
@@ -53,8 +61,14 @@ function refresh(){
 }
 
 function createHtml(name, desc){
-    var html = "<div class = 'note'> <h4 class = 'note-title'>" + name + "</h5> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
+    var htmltext = "<div class = 'note'> <h4 class = 'note-title'>" + name + "</h5> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
+    var html = document.createElement("div");
+    html.innerHTML = htmltext;
     
-    console.log(html);
+    console.log("The new html is: " + htmltext);
     return html;
 }
+
+//TODO Add a edit button
+//TODO Make delete do something
+//TODO Add Clear Button to New Note Me
