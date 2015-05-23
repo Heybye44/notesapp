@@ -83,3 +83,9 @@ body{
     padding: 1%;
 }
 
+.note div{
+    right: 0;
+    top: 0;
+    width: 1em;
+    display: block;
+}

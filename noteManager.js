@@ -31,8 +31,14 @@ function save() {
     return "Title: " + n + " Desc: " + d;
 }
 
-function remove(){
-    
+function remove(note){
+    if(confirm("Are you sure you want to delete the note called" + note + "?") == true){
+        localStorage.removeItem(note);
+    }else{
+        console.log("Note not deleted: " + note.substr(1));
+    }
+   
+    refresh();
 }
 
 function refresh(){
@@ -61,7 +67,7 @@ function refresh(){
 }
 
 function createHtml(name, desc){
-    var htmltext = "<div class = 'note'> <h4 class = 'note-title'>" + name + "</h5> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
+    var htmltext = "<div class = 'note'> <h4 class = 'note-title'>" + name + "<div><span onclick = 'edit()' class = 'glyphicon glyphicon-pencil btn'></span> <span onclick = 'remove('#" + name + "')' class = 'glyphicon glyphicon-remove btn'></span></div> </h4> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
     var html = document.createElement("div");
     html.innerHTML = htmltext;
     
@@ -69,6 +75,5 @@ function createHtml(name, desc){
     return html;
 }
 
-//TODO Add a edit button
 //TODO Make delete do something
 //TODO Add Clear Button to New Note Me
