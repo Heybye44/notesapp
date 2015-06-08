@@ -10,9 +10,9 @@ body{
     width: 100%;
     bottom: 0;
     left: 0;
-    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
-    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
-    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
     height: 4em;
 }
 
@@ -36,17 +36,17 @@ body{
     position: fixed;
     width: 100%;
     top: 0;
-    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 5px 15px -2px rgba(0,0,0,0.43);
-    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 5px 15px -2px rgba(0,0,0,0.43);
-    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 5px 15px -2px rgba(0,0,0,0.43);
+    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 5px 15px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 5px 15px -2px rgba(0,0,0,0.43);
+    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 5px 15px -2px rgba(0,0,0,0.43);
 }
 
 #new-menu{
     background-color: #33CCFF;
     position: fixed;
-    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
-    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
-    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.76), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
+    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 44px -2px rgba(0,0,0,0.43);
     top: 20%;
     margin: 15px;
     padding: 6px;
@@ -84,9 +84,9 @@ body{
 }
 
 .note{
-    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.3), 0px 0px 15px -2px rgba(0,0,0,0.43);
-    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.3), 0px 0px 15px -2px rgba(0,0,0,0.43);
-    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.3), 0px 0px 15px -2px rgba(0,0,0,0.43);
+    -webkit-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 15px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 15px -2px rgba(0,0,0,0.43);
+    box-shadow: inset 0px 0px 94px -37px rgba(0,0,0,0.2), 0px 0px 15px -2px rgba(0,0,0,0.43);
     background-color: #C4DDE6;
     padding: 0.5%;
 }
