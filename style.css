@@ -9,25 +9,21 @@ body{
     position: fixed;
     width: 100%;
     bottom: 0;
-    margin-top: 100%;
     left: 0;
-    box-shadow: 0px -3px 7px 3px #818282;
-    padding-top: 3px;
-    padding-bottom: 4px;
+    box-shadow: 0px -3px 5px 2px #818282;
+    height: 4em;
 }
 
 #bottom-menu li{
     display: inline;
     list-style-type: none;
-    padding: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding: 1px;
     
 }
 
 #bottom-menu li button{
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -60,10 +56,19 @@ body{
     width: 100%;
 }
 
+#new-menu ul{
+    width: 100%;
+    
+}
+
 #new-menu ul li{
     display: inline;
     list-style-type: none;
     padding: 0.1em;
+}
+
+#new-menu ul li button span{
+    padding: 0;
 }
 
 #note-area{
@@ -84,8 +89,7 @@ body{
 }
 
 .note div{
-    right: 0;
+    left: 0;
     top: 0;
-    width: 1em;
-    display: block;
+    display: inline;
 }

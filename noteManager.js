@@ -17,6 +17,7 @@ window.onload = function(){
         localStorage.removeItem("#");
     }
     
+    new WOW().init();
     refresh();
 }
 
@@ -32,7 +33,11 @@ function save() {
 }
 
 function remove(note){
-    if(confirm("Are you sure you want to delete the note called" + note + "?") == true){
+    var wantsToDelete = confirm("Are you sure you want to delete the note called " + note + "?");
+    
+    if(wantsToDelete == true){
+        console.log("The note was deleted: " + note);
+        
         localStorage.removeItem(note);
     }else{
         console.log("Note not deleted: " + note.substr(1));
@@ -64,10 +69,11 @@ function refresh(){
         
         console.info("i == localStorage.length is:" + i == localStorage.length);
     }
+    
 }
 
 function createHtml(name, desc){
-    var htmltext = "<div class = 'note'> <h4 class = 'note-title'>" + name + "<div><span onclick = 'edit()' class = 'glyphicon glyphicon-pencil btn'></span> <span onclick = 'remove('#" + name + "')' class = 'glyphicon glyphicon-remove btn'></span></div> </h4> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
+    var htmltext = "<div class = 'note wow animated pulse'> <h4 class = 'note-title'>" + name + "<div><span onclick = 'edit()' class = 'glyphicon glyphicon-pencil btn'></span></div> </h4> <p class = 'note-desc'>" + desc + "</p> </div> <br/>";
     var html = document.createElement("div");
     html.innerHTML = htmltext;
     
@@ -77,3 +83,8 @@ function createHtml(name, desc){
 
 //TODO Make delete do something
 //TODO Add Clear Button to New Note Me
+
+function edit(){
+    var n = "#" + newNoteTitle.value;
+    var d = newNoteDesc.value;
+}

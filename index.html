@@ -2,36 +2,39 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable = "no">
-			 <meta name="mobile-web-app-capable" content="yes">
+	    <meta name="mobile-web-app-capable" content="yes">
         
         <title>Notes</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="animate.min.css" type="text/css" />
     </head>
     
     <!-- My Scripts-->
     <script type="text/javascript" src="noteManager.js"></script>
+    <script type="text/javascript" src="wow.js"></script>
     
     <body>
         <a href = "#">
-            <div id = "ham-menu"></div>
+            <div id = "ham-menu" class = "animated slideInDown" data-wow-delay = "3s"></div>
         </a>
         <div id = "app-content">
-            <h2 align = "center">Notes</h2>
+            <h2 align = "center" class = "wow animated slideRight">Notes</h2>
             
             <ol id = "note-area">
                 
             </ol>
         </div>
         
-        <div id = "bottom-menu" align = "center">
+        <div id = "bottom-menu" align = "center" class = "animated slideInUp" data-wow-delay = "0s">
             <ul align = "center">
                 <li><button onClick = "refresh()" class = "btn btn-primary">Refresh</button></li>
-                <li><button class = "btn btn-danger">Delete</button></li>
+                <li><button onClick = "" class = "btn btn-success">Advanced</button></li>
+                <li><a href = "http://pentilex.weebly.com"><button class = "btn">More</button></a></li>
             </ul>
         </div>
         
-        <div id = "new-menu">
+        <div id = "new-menu" class = "animated slideInLeft" data-wow-delay = "10s" align = "center">
             <h3>New Note</h3>
             
             <label for="new-note-name">Name:</label>
@@ -44,6 +47,7 @@
             <ul>
                 <li><button class = "btn btn-success" onClick = "save()">Save</button></li>
                 <li><button class = "btn btn-primary" onClick = "clear()">Clear</button></li>
+                <li><button class = "btn btn-danger"><span onclick = "remove()" class = 'glyphicon glyphicon-remove btn'></span></button></li>
             </ul>
         </div>
     </body>
